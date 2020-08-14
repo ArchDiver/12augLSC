@@ -18,5 +18,5 @@ class BlogPostForm(FlaskForm):
 
 class LoginForm(FlaskForm):
     email = StringField('Email', validators=[DataRequired(), Email()])
-    pasword = PasswordField('Password', validators=[DataRequired()])
-    submit = SubmitField
+    password = PasswordField('Password', validators=[DataRequired()])
+    submit = SubmitField()
