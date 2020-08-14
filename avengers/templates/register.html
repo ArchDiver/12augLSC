@@ -1,4 +1,4 @@
-{% extends 'a_base.html' %}
+{% extends 'base.html' %}
 
 {% block content %}
 
@@ -15,10 +15,6 @@
         <fieldset>
             {{ form.email.label }}
             {{ form.email(class='form-control', placeholder='Email') }}
-        </fieldset>
-        <fieldset>
-            {{ form.phone.label }}
-            {{ form.phone(class='form-control', placeholder='Phone Number') }}
         </fieldset>
         <fieldset>
             {{ form.password.label }}

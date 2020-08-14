@@ -1,5 +1,6 @@
 venv/
-New folder (2)/
 __pycache__/
 .vscode/
 .env 
+app.db
+.DS_Store

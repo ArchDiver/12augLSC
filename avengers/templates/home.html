@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<header class=banner>
+    <h1 class="header-text">This is how we Assemble the Avengers</h1>
+</header>
+
+
+<h2>Hello there, {{ current_user.username }}</h2>
+
+{% if current_user.is_authenticated %}
+<h2>The list of current Avenger Phone Numbers:</h2>
+{% for post in posts %}
+    <div class="container">
+        <h3>
+            <a href="{{ url_for('post_detail', post_id = post.id) }}">{{ post.codename }}</a>
+        </h3>
+        <p>{{ post.phone }}</p>
+    </div>
+{% endfor %}
+
+{% else %}
+<h2>Your no Avenger!</h2>
+
+{%endif %}
+
+
+{% endblock content %}
